@@ -1,0 +1,15 @@
+import Link from "next/link";
+import { ArrowRight, Eye, FileSearch, ShieldCheck } from "lucide-react";
+import { CTASection, PageHero, SectionHeading, TrustStrip } from "@/components/site-shell";
+import { WorkflowAccordion } from "@/components/product-interactions";
+import { evidenceClasses } from "@/app/data";
+
+export const metadata = { title: "How It Works", description: "A transparent clinical AI intake path from patient-originated artifact to human-reviewed Patient Intelligence Brief." };
+
+export default function HowItWorks() {
+  return <main id="main-content"><TrustStrip /><PageHero eyebrow="How it works" title="A transparent intake path between patient AI and clinical judgment." lede="The workflow separates assertions, connects them to sources, surfaces gaps, and records human decisions. It does not transform uncertainty into clinical fact."><div className="button-group"><Link className="button button-primary" href="/demo">Inspect the synthetic demo <ArrowRight size={17} /></Link><Link className="button button-secondary" href="/pilot">Explore a pilot</Link></div></PageHero>
+    <section className="section"><div className="container narrow-wide"><SectionHeading eyebrow="Seven visible stages" title="Every transformation has a boundary, a human gate, and an audit event." /><WorkflowAccordion /></div></section>
+    <section className="section evidence-vocabulary"><div className="container"><SectionHeading eyebrow="Evidence vocabulary" title="Separate what is known from how it became known." copy="These labels describe assertions in a submission. They do not score the patient or decide the clinical meaning." /><div className="evidence-class-grid">{evidenceClasses.map((item) => <article key={item.key} className={`evidence-card evidence-${item.key}`}><span>{item.label}</span><h3>{item.source}</h3><p>{item.definition}</p></article>)}</div></div></section>
+    <section className="section dark-section"><div className="container three-principles"><article><Eye /><h3>Inspectable</h3><p>Click from an assertion to its source category, reference, gaps, conflicts, and transformation history.</p></article><article><FileSearch /><h3>Uncertainty stays visible</h3><p>Unavailable, unknown, unsupported, and conflicting are legitimate states—not errors to hide.</p></article><article><ShieldCheck /><h3>Human at every consequential gate</h3><p>Urgency routing, coding, medication review, and disposition all require authorized human judgment.</p></article></div></section>
+    <section className="section"><div className="container state-ledger"><SectionHeading eyebrow="Designed for the hard states" title="The workflow does not depend on perfect inputs." /><div>{["Source unavailable", "Model or version unknown", "Chart comparison not authorized", "Conflicting values", "Unsupported assertion", "Urgency language awaiting human review", "Submission acknowledged", "Disposition logged"].map((x, i) => <article key={x}><span>{String(i + 1).padStart(2, "0")}</span><strong>{x}</strong><small>{i < 5 ? "Visible limitation" : "Human workflow event"}</small></article>)}</div></div></section><CTASection /></main>;
+}
