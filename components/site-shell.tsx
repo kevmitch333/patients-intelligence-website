@@ -123,6 +123,19 @@ export function Footer() {
   ] as const;
   return (
     <footer className="site-footer">
+      <section className="newsletter-signup" aria-labelledby="newsletter-title">
+        <div className="container newsletter-grid">
+          <div>
+            <span className="eyebrow">Patients Intelligence updates</span>
+            <h2 id="newsletter-title">Follow the work as it develops.</h2>
+            <p>Receive occasional updates on the platform, pilot pathway, research, and the emerging PGI Standard.</p>
+          </div>
+          <div className="newsletter-form">
+            <script src="https://cdn.sendfox.com/js/embed.js" data-form="3zkj4z" data-api="https://sendfox.com" async></script>
+            <p className="newsletter-note">For updates only. Do not submit medical information or personal health details.</p>
+          </div>
+        </div>
+      </section>
       <div className="container footer-grid">
         <div className="footer-brand">
           <Link href="/" className="wordmark wordmark-light"><span className="wordmark-mark" aria-hidden="true"><i /><i /><i /></span><span><strong>Patients Intelligence</strong><small>Clinical AI intake infrastructure</small></span></Link>
