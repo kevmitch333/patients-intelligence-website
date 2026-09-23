@@ -27,7 +27,7 @@ export default function Home() {
             <blockquote>“We do not evaluate the patient. We evaluate the submission.”</blockquote>
           </div>
           <figure className="hero-editorial">
-            <Image src="/patients-intelligence-hero-v2.png" alt="A patient and medical professional in conversation as information is organized into a clear brief between them" width={1536} height={1024} priority unoptimized />
+            <Image src="/patients-intelligence-hero-conference.png" alt="A patient and medical professional in conversation as information is organized into a clear brief between them" width={1536} height={1024} priority unoptimized />
             <figcaption><span>Patient voice</span><i /> <span>Evidence-aware brief</span><i /> <strong>Human judgment</strong></figcaption>
             <div className="hero-image-note">AI can help prepare the conversation.<br />Care remains human.</div>
           </figure>
