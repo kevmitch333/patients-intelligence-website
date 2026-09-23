@@ -8,6 +8,7 @@ const primaryNav = [
   ["Pilot", "/pilot"],
   ["PGI Standard", "/pgi-standard"],
   ["Trust & Governance", "/trust"],
+  ["Insights", "/insights"],
   ["About", "/about"],
 ] as const;
 
@@ -41,7 +42,6 @@ export function Header() {
               {primaryNav.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}
               <Link href="/demo">Synthetic demo</Link>
               <Link href="/partners">Partners</Link>
-              <Link href="/insights">Insights</Link>
               <Link href="/contact" className="button button-primary">Explore a pilot</Link>
             </nav>
           </details>
