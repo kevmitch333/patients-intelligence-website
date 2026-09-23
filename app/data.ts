@@ -2,11 +2,11 @@ export type TruthStatus = "active" | "development" | "proposed" | "forming" | "f
 
 export const statuses: Record<TruthStatus, { label: string; detail: string }> = {
   active: { label: "Active", detail: "Operational and available now." },
-  development: { label: "In development", detail: "Currently being built or tested." },
-  proposed: { label: "Proposed", detail: "Defined and awaiting approval or agreement." },
-  forming: { label: "Forming", detail: "Recruitment or governance formation is underway." },
-  future: { label: "Future — gated", detail: "Deferred until evidence and governance gates are met." },
-  draft: { label: "Draft — open for review", detail: "Working material; not a finalized standard or policy." },
+  development: { label: "Conference demo", detail: "A public demonstration of the product direction and workflow." },
+  proposed: { label: "Pilot framework", detail: "A bounded framework for discussion with qualified healthcare organizations." },
+  forming: { label: "Open collaboration", detail: "Inviting clinical, patient, research, and implementation perspectives." },
+  future: { label: "Roadmap", detail: "A future capability subject to evidence, safety, and governance requirements." },
+  draft: { label: "Open specification", detail: "A shared framework designed for review and contribution." },
 };
 
 export const evidenceClasses = [
@@ -89,7 +89,7 @@ export const pilotPhases = [
 export const initiatives = [
   { name: "Provider Intake", status: "development" as TruthStatus, description: "The provider-facing enterprise wedge for receiving, structuring, profiling, routing, and logging patient-originated AI." },
   { name: "Patient Prepare", status: "development" as TruthStatus, description: "A limited concept that restructures material a patient already has; it does not generate new clinical conclusions." },
-  { name: "PGI Standard v0.9", status: "draft" as TruthStatus, description: "A working framework for provenance, evidence labels, routing events, human review, and audit history." },
+  { name: "PGI Standard v0.9", status: "draft" as TruthStatus, description: "An open framework for provenance, evidence labels, routing events, human review, and audit history." },
   { name: "Founding 100", status: "forming" as TruthStatus, description: "A recruited cohort of clinicians, patients and advocates, researchers, and institutional participants." },
   { name: "Vault", status: "future" as TruthStatus, description: "Patient-controlled longitudinal custody, deferred until commercial, legal, privacy, security, and governance gates are met." },
 ];
@@ -124,7 +124,7 @@ export const insightItems = [
     changed: "The FDA issued final CDS guidance in January 2026 clarifying its interpretation of non-device CDS criteria and patient/caregiver software functions.",
     strength: "Primary regulatory guidance",
     limit: "Guidance is not a product-specific legal determination or clearance.",
-    implication: "Keep the intended use narrow, preserve independent clinical review, and obtain qualified counsel before deployment.",
+    implication: "Keep the intended use narrow, preserve independent clinical review, and meet all applicable requirements before deployment.",
     action: "Commission a written, product-specific regulatory analysis for Intake.",
     date: "January 2026",
     reviewed: "September 4, 2026",

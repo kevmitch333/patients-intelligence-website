@@ -95,7 +95,7 @@ export const trustFaqs = [
   ["How are errors corrected?", "Correction mechanisms, version history, and acknowledgment events are designed into the audit trail."],
   ["Can data be used for research?", "Only under a published policy, explicit and revocable consent, approved de-identification, and governance review. None is active in this public prototype."],
   ["What happens when models change?", "Model, version, timestamp, inputs, and transformation behavior must be re-observed and revalidated over time."],
-  ["Is this affiliated with MGB/BWH?", "No affiliation or endorsement is claimed. The Foxborough work is described only as a proposed co-design opportunity."],
+  ["Is this affiliated with a health system?", "No health-system affiliation, endorsement, or active institutional pilot is claimed on this public demonstration site."],
   ["What evidence is needed before live use?", "Approved intended use, governance, privacy, security, legal and regulatory review, silent validation, stop rules, and an institution-controlled go/no-go decision."],
 ] as const;
 
