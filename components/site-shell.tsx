@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Menu, ShieldCheck } from "lucide-react";
 import { statuses, type TruthStatus } from "@/app/data";
@@ -29,7 +30,7 @@ export function Header() {
       <header className="site-header">
         <div className="header-inner">
           <Link href="/" className="wordmark" aria-label="Patients Intelligence home">
-            <span className="wordmark-mark" aria-hidden="true"><i /><i /><i /></span>
+            <span className="brand-logo" aria-hidden="true"><Image src="/patients-intelligence-logo.png" alt="" width={72} height={72} unoptimized /></span>
             <span><strong>Patients Intelligence</strong><small>Clinical AI intake infrastructure</small></span>
           </Link>
           <nav className="desktop-nav" aria-label="Primary navigation">
@@ -138,7 +139,7 @@ export function Footer() {
       </section>
       <div className="container footer-grid">
         <div className="footer-brand">
-          <Link href="/" className="wordmark wordmark-light"><span className="wordmark-mark" aria-hidden="true"><i /><i /><i /></span><span><strong>Patients Intelligence</strong><small>Clinical AI intake infrastructure</small></span></Link>
+          <Link href="/" className="wordmark wordmark-light"><span className="brand-logo" aria-hidden="true"><Image src="/patients-intelligence-logo.png" alt="" width={72} height={72} unoptimized /></span><span><strong>Patients Intelligence</strong><small>Clinical AI intake infrastructure</small></span></Link>
           <p>Make patient-originated AI legible, verifiable, and routable—while keeping clinical judgment human.</p>
           <div className="footer-status"><StatusTag status="development" compact /><StatusTag status="draft" compact /><StatusTag status="forming" compact /></div>
         </div>
